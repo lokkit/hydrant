@@ -1,0 +1,7 @@
+hydrant:
+    node_ip: 127.0.0.1
+    node_rpc_port: 8545
+    source_account_address: "0xe0a83a8b5ba5c9acc140f89296187f96a163cf43"
+    source_account_password: ""
+    wei_per_request: 20000000000000000000 #20 ETHER
+    symmetric_key_password: "lokkit"

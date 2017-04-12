@@ -1,0 +1,16 @@
+#  This file is part of the lokkit-hydrant.
+
+[Unit]
+Description=Start hydrant service
+BindsTo=lokkit-chain.service
+After=lokkit-chain.service 
+
+[Service]
+Type=simple
+User=pi
+Restart=always
+RestartSec=3
+ExecStart=/usr/local/bin/hydrant /etc/lokkit/hydrant.yml
+
+[Install]
+WantedBy=multi-user.target

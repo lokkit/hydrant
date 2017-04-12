@@ -1,4 +1,4 @@
-Welcome to lokkit doorman's documentation!
+Welcome to lokkit hydrant's documentation!
 ======================================
 
 Contents:

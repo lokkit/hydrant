@@ -1,50 +1,39 @@
 ===============================
-lokkit doorman
+lokkit hydrant
 ===============================
 
-.. image:: https://img.shields.io/pypi/v/lokkit_doorman.svg
-        :target: https://pypi.python.org/pypi/lokkit_doorman
+Python service that listens on an ethereum node for incoming whisper messages.
+Acts as a faucet request handler via whisper messages without any security considerations. Hence the name of a ridiculous quasi-infinite water-source.
 
-.. image:: https://img.shields.io/travis/kraeki/lokkit_doorman.svg
-        :target: https://travis-ci.org/kraeki/lokkit_doorman
-
-.. image:: https://readthedocs.org/projects/lokkit-doorman/badge/?version=latest
-        :target: https://lokkit-doorman.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-.. image:: https://pyup.io/repos/github/kraeki/lokkit_doorman/shield.svg
-     :target: https://pyup.io/repos/github/kraeki/lokkit_doorman/
-     :alt: Updates
-
-
-Python service that listens on local ethereum node for incomming whisper messages.
-
+Specify your own config.yml and run hydrant.py.
 
 * Free software: MIT license
-* Documentation: https://lokkit-doorman.readthedocs.io.
-
 
 Features
 --------
 
-* TODO
-
-
+* TODO: define requirements
+* TODO: testing
 
 As a developer
 ------------------
 
 .. code-block:: bash
 
-  apt-get install python3-virtualenv
+  # install dependency
+  pip install pip --upgrade
+  pip install --editable hydrant/ethjsonrpc
 
-  # Setup virtual env
-  virtualenv -p python3 env
-  . env/bin/activate
+  # run hydrant
+  python hydrant/hydrant.py [hydrant/config.yml]
 
-  # Install python dependencies
-  pip3 install -r requirements.txt
+To send a hydrant request run the following js lines.
 
+.. code-block:: javascript
 
-Credits
----------
+  var shhPw = "lokkit";
+  var dest = eth.accounts[0];
+  var key = shh.addSymmetricKeyFromPassword(shhPw);
+  var topic = web3.sha3("hydrant").substr(0, 10);
+  var payload = web3.fromAscii(dest);
+  shh.post({type: 'sym', ttl: 20, topic: topic, powTarget: 2.5, powTime: 8, payload: payload, key: key});

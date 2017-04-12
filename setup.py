@@ -10,7 +10,8 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    # TODO: put package requirements here
+    'pyyaml',
+    'ethjsonrpc<=99.99'
 ]
 
 test_requirements = [
@@ -18,23 +19,28 @@ test_requirements = [
 ]
 
 setup(
-    name='lokkit_doorman',
-    version='0.1.0',
-    description="Python service that listens on local ethereum node for incomming whisper messages.",
+    name='lokkit-hydrant',
+    version='0.2.0',
+    description="Python service that listens on an ethereum node for incoming whisper messages.",
     long_description=readme + '\n\n' + history,
     author="Andreas Schmid",
     author_email='ikeark@gmail.com',
-    url='https://github.com/kraeki/lokkit_doorman',
+    url='https://github.com/lokkit/hydrant',
     packages=[
-        'lokkit_doorman',
+        'hydrant',
     ],
-    package_dir={'lokkit_doorman':
-                 'lokkit_doorman'},
+    entry_points={
+        'console_scripts': [
+            'hydrant = hydrant.__main__:main'
+            ]
+        },
+    package_dir={ 'hydrant': 'hydrant' },
     include_package_data=True,
     install_requires=requirements,
+    dependency_links=['https://github.com/lokkit/ethjsonrpc/archive/master.zip#egg=ethjsonrpc-99.99'],
     license="MIT license",
     zip_safe=False,
-    keywords='lokkit_doorman',
+    keywords='lokkit-hydrant',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

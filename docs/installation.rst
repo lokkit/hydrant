@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install lokkit doorman, run this command in your terminal:
+To install lokkit hydrant, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install lokkit_doorman
+    $ pip install lokkit-hydrant
 
-This is the preferred method to install lokkit doorman, as it will always install the most recent stable release. 
+This is the preferred method to install lokkit hydrant, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for lokkit doorman can be downloaded from the `Github repo`_.
+The sources for lokkit hydrant can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/kraeki/lokkit_doorman
+    $ git clone git://github.com/lokkit/hydrant
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/kraeki/lokkit_doorman/tarball/master
+    $ curl  -OL https://github.com/lokkit/hydrant/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/kraeki/lokkit_doorman
-.. _tarball: https://github.com/kraeki/lokkit_doorman/tarball/master
+.. _Github repo: https://github.com/lokkit/hydrant
+.. _tarball: https://github.com/lokkit/hydrant/tarball/master

@@ -2,21 +2,21 @@
 # -*- coding: utf-8 -*-
 
 """
-test_lokkit_doorman
+test_hydrant
 ----------------------------------
 
-Tests for `lokkit_doorman` module.
+Tests for `hydrant` module.
 """
 
 
 import sys
 import unittest
 
-from lokkit_doorman import lokkit_doorman
+from hydrant import hydrant
 
 
 
-class TestLokkit_doorman(unittest.TestCase):
+class TestHydrant(unittest.TestCase):
 
     def setUp(self):
         pass

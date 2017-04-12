@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use lokkit doorman in a project::
+To use lokkit hydrant in a project::
 
-    import lokkit_doorman
+    import hydrant
