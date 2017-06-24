@@ -28,7 +28,7 @@ As a developer
   python lokkit_hydrant/lokkit_hydrant.py [lokkit_hydrant/config.yml]
 
 To send a hydrant request run the following js lines.
-.. code-block:: javascript
+.. code-block:: bash
   var shhPw = "lokkit";
   var dest = eth.accounts[0];
   var key = shh.addSymmetricKeyFromPassword(shhPw);
