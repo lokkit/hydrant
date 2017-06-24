@@ -3,5 +3,5 @@ hydrant:
     node_rpc_port: 8545
     source_account_address: "0x55047206d03afef0d79bb2d90710bf9f23737860"
     source_account_password: "hirzel"
-    wei_per_request: 1000000000000000000
+    wei_per_request: 20000000000000000000 #20 ETHER
     symmetric_key_password: "lokkit"
